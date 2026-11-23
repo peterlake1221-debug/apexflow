@@ -1,0 +1,8 @@
+{
+  "name": "Remix ApexFlow — School \u0026 Sneaker Vault",
+  "description": "High-energy School Work Manager with Thea-style AI Study Hub, Canvas .ics Calendar sync, Prime Athlete Spotlight Mode, and Sneaker Inventory Profit Tracker.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

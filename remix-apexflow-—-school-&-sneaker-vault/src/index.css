@@ -1,0 +1,442 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --font-display: 'Plus Jakarta Sans', system-ui, sans-serif;
+    --font-sans: 'DM Sans', system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #04070f;
+    color: #f1f5f9;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-mono-nums {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Futuristic Cyber-HUD Grid Background */
+.hud-cyber-grid {
+  background-image:
+    radial-gradient(rgba(56, 189, 248, 0.14) 1px, transparent 1px),
+    linear-gradient(to right, rgba(56, 189, 248, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(56, 189, 248, 0.035) 1px, transparent 1px);
+  background-size: 28px 28px, 56px 56px, 56px 56px;
+}
+
+.hud-cyber-grid-emerald {
+  background-image:
+    radial-gradient(rgba(52, 211, 153, 0.14) 1px, transparent 1px),
+    linear-gradient(to right, rgba(16, 185, 129, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(16, 185, 129, 0.04) 1px, transparent 1px);
+  background-size: 28px 28px, 56px 56px, 56px 56px;
+}
+
+.hud-cyber-grid-light {
+  background-image:
+    radial-gradient(rgba(15, 23, 42, 0.1) 1px, transparent 1px),
+    linear-gradient(to right, rgba(15, 23, 42, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(15, 23, 42, 0.04) 1px, transparent 1px);
+  background-size: 28px 28px, 56px 56px, 56px 56px;
+}
+
+/* Adaptive Light Theme Overrides (for White, Yellow, or bright rainbow themes) */
+.theme-light {
+  color: #0f172a;
+}
+
+.theme-light aside,
+.theme-light header {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  border-color: rgba(15, 23, 42, 0.14) !important;
+}
+
+.theme-light aside .bg-gradient-to-r,
+.theme-light aside .bg-slate-900\/75,
+.theme-light aside .bg-slate-900\/80 {
+  background: rgba(248, 250, 252, 0.94) !important;
+  border-color: rgba(15, 23, 42, 0.14) !important;
+  color: #0f172a !important;
+}
+
+.theme-light aside input {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  border-color: rgba(15, 23, 42, 0.2) !important;
+}
+
+.theme-light main .bg-slate-900\/60,
+.theme-light main .bg-slate-900\/65,
+.theme-light main .bg-slate-900\/75,
+.theme-light main .bg-slate-900\/85,
+.theme-light main .bg-slate-900\/90,
+.theme-light main .bg-\[\#090D16\]\/85,
+.theme-light main .bg-slate-950\/60,
+.theme-light main .bg-slate-950\/70,
+.theme-light main .bg-slate-950\/75,
+.theme-light main .bg-slate-950\/80,
+.theme-light main section[aria-label="Due Next Live Countdowns"],
+.theme-light main section[aria-label="Urgent 4-Day Return Deadline Alert"],
+.theme-light main section[aria-label="Returned Shoes Ledger"] {
+  background-image: none !important;
+  background-color: rgba(255, 255, 255, 0.92) !important;
+  border-color: rgba(15, 23, 42, 0.16) !important;
+  box-shadow: 0 8px 28px rgba(15, 23, 42, 0.08) !important;
+}
+
+.theme-light main section[aria-label="Urgent 4-Day Return Deadline Alert"] {
+  background-color: rgba(255, 241, 242, 0.95) !important;
+  border-color: rgba(225, 29, 72, 0.35) !important;
+}
+
+.theme-light main input,
+.theme-light main select,
+.theme-light main textarea {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  border-color: rgba(15, 23, 42, 0.2) !important;
+}
+
+.theme-light aside .bg-white\/5,
+.theme-light header .bg-white\/5,
+.theme-light main .bg-white\/5 {
+  background-color: rgba(15, 23, 42, 0.06) !important;
+  border-color: rgba(15, 23, 42, 0.14) !important;
+}
+
+.theme-light .text-white:not(.theme-keep-light),
+.theme-light .text-slate-100:not(.theme-keep-light),
+.theme-light .text-slate-200:not(.theme-keep-light) {
+  color: #0f172a !important;
+}
+
+.theme-light .text-slate-300:not(.theme-keep-light),
+.theme-light .text-slate-400:not(.theme-keep-light) {
+  color: #1e293b !important;
+}
+
+.theme-light .text-cyan-200:not(.theme-keep-light),
+.theme-light .text-cyan-300:not(.theme-keep-light) {
+  color: #0369a1 !important;
+}
+
+.theme-light .text-blue-200:not(.theme-keep-light),
+.theme-light .text-blue-300:not(.theme-keep-light),
+.theme-light .text-indigo-200:not(.theme-keep-light),
+.theme-light .text-indigo-300:not(.theme-keep-light) {
+  color: #1d4ed8 !important;
+}
+
+.theme-light .text-emerald-200:not(.theme-keep-light),
+.theme-light .text-emerald-300:not(.theme-keep-light),
+.theme-light .text-emerald-400:not(.theme-keep-light) {
+  color: #047857 !important;
+}
+
+.theme-light .text-amber-200:not(.theme-keep-light),
+.theme-light .text-amber-300:not(.theme-keep-light) {
+  color: #b45309 !important;
+}
+
+.theme-light .text-rose-200:not(.theme-keep-light),
+.theme-light .text-rose-300:not(.theme-keep-light),
+.theme-light .text-rose-400:not(.theme-keep-light) {
+  color: #be123c !important;
+}
+
+.theme-light .border-white\/10,
+.theme-light .border-white\/15,
+.theme-light .border-white\/5 {
+  border-color: rgba(15, 23, 42, 0.14) !important;
+}
+
+.theme-light .telemetry-glow-blue,
+.theme-light .telemetry-glow-emerald,
+.theme-light .telemetry-glow-cyan,
+.theme-light .telemetry-glow-amber,
+.theme-light .telemetry-glow-rose {
+  text-shadow: none !important;
+}
+
+/* Pure CSS HUD Corner Brackets (Zero extra DOM nodes) */
+.hud-corners {
+  position: relative;
+}
+
+.hud-corners::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-radius: inherit;
+  padding: 1px;
+  background:
+    linear-gradient(to right, var(--hud-corner, rgba(59, 130, 246, 0.75)) 14px, transparent 14px) 0 0 / 100% 2px no-repeat,
+    linear-gradient(to bottom, var(--hud-corner, rgba(59, 130, 246, 0.75)) 14px, transparent 14px) 0 0 / 2px 100% no-repeat,
+    linear-gradient(to left, var(--hud-corner, rgba(59, 130, 246, 0.75)) 14px, transparent 14px) 100% 0 / 100% 2px no-repeat,
+    linear-gradient(to bottom, var(--hud-corner, rgba(59, 130, 246, 0.75)) 14px, transparent 14px) 100% 0 / 2px 100% no-repeat,
+    linear-gradient(to right, var(--hud-corner, rgba(59, 130, 246, 0.75)) 14px, transparent 14px) 0 100% / 100% 2px no-repeat,
+    linear-gradient(to top, var(--hud-corner, rgba(59, 130, 246, 0.75)) 14px, transparent 14px) 0 100% / 2px 100% no-repeat,
+    linear-gradient(to left, var(--hud-corner, rgba(59, 130, 246, 0.75)) 14px, transparent 14px) 100% 100% / 100% 2px no-repeat,
+    linear-gradient(to top, var(--hud-corner, rgba(59, 130, 246, 0.75)) 14px, transparent 14px) 100% 100% / 2px 100% no-repeat;
+}
+
+.hud-blue {
+  --hud-corner: rgba(59, 130, 246, 0.8);
+}
+
+.hud-indigo {
+  --hud-corner: rgba(129, 140, 248, 0.8);
+}
+
+.hud-emerald {
+  --hud-corner: rgba(52, 211, 153, 0.85);
+}
+
+.hud-cyan {
+  --hud-corner: rgba(34, 211, 238, 0.85);
+}
+
+.hud-amber {
+  --hud-corner: rgba(251, 191, 36, 0.85);
+}
+
+.hud-rose {
+  --hud-corner: rgba(251, 113, 133, 0.85);
+}
+
+/* Telemetry Text Glow */
+.telemetry-glow-blue {
+  text-shadow: 0 0 12px rgba(96, 165, 250, 0.45);
+}
+.telemetry-glow-emerald {
+  text-shadow: 0 0 12px rgba(52, 211, 153, 0.45);
+}
+.telemetry-glow-cyan {
+  text-shadow: 0 0 12px rgba(34, 211, 238, 0.45);
+}
+.telemetry-glow-amber {
+  text-shadow: 0 0 12px rgba(251, 191, 36, 0.45);
+}
+.telemetry-glow-rose {
+  text-shadow: 0 0 12px rgba(251, 113, 133, 0.45);
+}
+
+/* Lightweight GPU-accelerated CSS Turntable Spin & Holographic Pod */
+@keyframes sneakerTurntable {
+  0% {
+    transform: perspective(600px) rotateY(-18deg) translateY(0px);
+  }
+  25% {
+    transform: perspective(600px) rotateY(0deg) translateY(-3px);
+  }
+  50% {
+    transform: perspective(600px) rotateY(18deg) translateY(0px);
+  }
+  75% {
+    transform: perspective(600px) rotateY(0deg) translateY(-2px);
+  }
+  100% {
+    transform: perspective(600px) rotateY(-18deg) translateY(0px);
+  }
+}
+
+@keyframes pedestalPulse {
+  0%, 100% {
+    transform: scaleX(0.92);
+    opacity: 0.55;
+  }
+  50% {
+    transform: scaleX(1.06);
+    opacity: 0.9;
+  }
+}
+
+@keyframes holoSweep {
+  0% {
+    transform: translateY(-120%);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.45;
+  }
+  80% {
+    opacity: 0.45;
+  }
+  100% {
+    transform: translateY(140%);
+    opacity: 0;
+  }
+}
+
+.sneaker-spin-stage {
+  perspective: 600px;
+}
+
+.sneaker-spin-shoe {
+  animation: sneakerTurntable 5.4s ease-in-out infinite;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.sneaker-spin-pedestal {
+  animation: pedestalPulse 5.4s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+.holo-scanline-grid {
+  background-image: repeating-linear-gradient(
+    to bottom,
+    rgba(34, 211, 238, 0.06) 0px,
+    rgba(34, 211, 238, 0.06) 1px,
+    transparent 1px,
+    transparent 4px
+  );
+}
+
+.holo-light-sweep {
+  animation: holoSweep 4.2s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+.sneaker-spin-container:hover .sneaker-spin-shoe,
+.sneaker-spin-container:hover .sneaker-spin-pedestal,
+.sneaker-motion-paused .sneaker-spin-shoe,
+.sneaker-motion-paused .sneaker-spin-pedestal,
+.sneaker-motion-paused .holo-light-sweep {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sneaker-spin-shoe,
+  .sneaker-spin-pedestal,
+  .holo-light-sweep,
+  .city-rain-drop,
+  .crane-arm-sway,
+  .confetti-burst-dot {
+    animation: none !important;
+  }
+}
+
+/* Study City Weather, Construction Crane & Quest Confetti Keyframes */
+@keyframes cityRainDrop {
+  0% {
+    transform: translate3d(0, -10px, 0);
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.78;
+  }
+  100% {
+    transform: translate3d(-12px, 38px, 0);
+    opacity: 0.15;
+  }
+}
+
+@keyframes craneArmSway {
+  0%, 100% {
+    transform: rotate(-2.5deg);
+  }
+  50% {
+    transform: rotate(3.2deg);
+  }
+}
+
+@keyframes confettiBurst {
+  0% {
+    transform: translate3d(0, 0, 0) scale(0.4);
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(var(--tx, 20px), var(--ty, -24px), 0) scale(1.1);
+    opacity: 0;
+  }
+}
+
+.city-rain-drop {
+  animation: cityRainDrop 1.35s linear infinite;
+  will-change: transform, opacity;
+}
+
+.crane-arm-sway {
+  animation: craneArmSway 2.8s ease-in-out infinite;
+  will-change: transform;
+}
+
+.confetti-burst-dot {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 9999px;
+  animation: confettiBurst 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  will-change: transform, opacity;
+}
+
+/* Sleek Custom Scrollbars */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(148, 163, 184, 0.35) transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.28);
+  border-radius: 9999px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.48);
+}
+
+.theme-light main section[data-testid="study-city-panel"],
+.theme-light main section[data-testid="quest-board"],
+.theme-light main section[data-testid="sneaker-profit-chart"] {
+  background-image: none !important;
+  background-color: rgba(255, 255, 255, 0.92) !important;
+  border-color: rgba(15, 23, 42, 0.16) !important;
+  box-shadow: 0 8px 28px rgba(15, 23, 42, 0.08) !important;
+}
+
+.theme-light main [data-testid="study-city-panel"] svg text,
+.theme-light main [data-testid="sneaker-profit-chart"] svg text {
+  fill: inherit;
+}
+
+/* Flashcard 3D flip helper */
+.flip-card-inner {
+  transform-style: preserve-3d;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.flip-card-inner.is-flipped {
+  transform: rotateY(180deg);
+}
+
+.flip-card-face {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+}
